@@ -19,7 +19,7 @@ pipeline {
         }
         stage('push') {
             environment {
-                dockerpwd = credentials('docker_pwd')
+                dockerpwd = credentials('docker_hub_crd')
             }
             steps {
                     sh 'docker login -u inewthinker -p ${dockerpwd}'
